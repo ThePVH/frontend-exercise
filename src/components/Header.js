@@ -17,7 +17,10 @@ function Header() {
           </Link>
         </div>
         <div className="flex items-center">
-          <Link className="flex items-center text-blue" to="/login">
+          <Link
+            className="flex items-center text-blue hover:underline"
+            to="/login"
+          >
             Log in
             <svg
               width="14"
