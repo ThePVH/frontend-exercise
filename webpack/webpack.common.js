@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
   module: {
     rules: [
@@ -32,12 +32,12 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, '..', './build'),
+    path: path.resolve(__dirname, '..', './dist'),
     filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '..', './src/index.html'),
+      template: path.resolve(__dirname, '..', './public/index.html'),
     }),
   ],
   //   stats: "errors-only",
